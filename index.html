@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0b0f19" />
+  <meta name="description" id="metaDescription" content="Carte de visite numérique et portfolio." />
+  <title id="pageTitle">Youssef Kotari — Carte de visite numérique</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="background">
+    <div class="orb orb-one"></div>
+    <div class="orb orb-two"></div>
+    <div class="grid"></div>
+  </div>
+
+  <main class="page">
+    <section class="card" aria-label="Digital business card">
+      <div class="topbar">
+        <span class="status"><span></span> <span data-i18n="status">Disponible pour des opportunités</span></span>
+
+        <div class="topbar-controls">
+          <div class="lang-switch" role="group" aria-label="Language selection">
+            <button type="button" class="lang-btn" data-lang="fr" aria-label="Français">FR</button>
+            <button type="button" class="lang-btn" data-lang="en" aria-label="English">EN</button>
+            <button type="button" class="lang-btn" data-lang="ar" aria-label="العربية">AR</button>
+          </div>
+          <button class="icon-btn" id="themeToggle" aria-label="Toggle theme" title="Toggle theme">☼</button>
+        </div>
+      </div>
+
+      <div class="profile">
+        <div class="avatar" aria-label="Profile placeholder">
+          <span id="avatarLetter">Y</span>
+        </div>
+        <div class="identity">
+          <p class="eyebrow" data-i18n="greeting">BONJOUR, JE SUIS</p>
+          <h1 data-i18n="name">Youssef Kotari</h1>
+          <p class="role" data-i18n="role">Développeur Full-Stack · Créateur</p>
+        </div>
+      </div>
+
+      <p class="intro" data-i18n="intro">
+        Je conçois des applications web pratiques qui transforment des idées et des processus métiers en produits
+        numériques simples et intuitifs.
+      </p>
+
+      <div class="actions">
+        <button class="primary-btn" id="saveContact">
+          <span>＋</span> <span data-i18n="saveContact">Enregistrer le contact</span>
+        </button>
+        <button class="secondary-btn" id="shareCard">
+          <span>↗</span> <span data-i18n="share">Partager</span>
+        </button>
+      </div>
+
+      <div class="contact-list">
+        <a class="contact-row" href="mailto:ko.youssef.public@example.com">
+          <span class="contact-icon">✉</span>
+          <span>
+            <small data-i18n="emailLabel">E-mail</small>
+            <strong>ko.youssef.public@example.com</strong>
+          </span>
+          <span class="row-arrow">›</span>
+        </a>
+
+        <a class="contact-row" href="tel:+212715125245">
+          <span class="contact-icon">☎</span>
+          <span>
+            <small data-i18n="phoneLabel">Téléphone</small>
+            <strong dir="ltr">+212 7 15 12 52 45</strong>
+          </span>
+          <span class="row-arrow">›</span>
+        </a>
+
+        <!-- <a class="contact-row" href="https://www.linkedin.com/" target="_blank" rel="noopener">
+          <span class="contact-icon">in</span>
+          <span>
+            <small data-i18n="linkedinLabel">LinkedIn</small>
+            <strong dir="ltr">linkedin.com/in/your-profile</strong>
+          </span>
+          <span class="row-arrow">›</span>
+        </a> -->
+
+        <a class="contact-row" href="https://github.com/kotariyoussef" target="_blank" rel="noopener">
+          <span class="contact-icon">⌘</span>
+          <span>
+            <small data-i18n="githubLabel">GitHub</small>
+            <strong dir="ltr">github.com/kotariyoussef</strong>
+          </span>
+          <span class="row-arrow">›</span>
+        </a>
+      </div>
+
+      <div class="project">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow" data-i18n="featuredProject">PROJET EN VEDETTE</p>
+            <h2 data-i18n="projectTitle">Admin Centre D'Education</h2>
+          </div>
+          <span class="project-badge" data-i18n="liveBadge">EN LIGNE</span>
+        </div>
+
+        <p class="project-description" data-i18n="projectDescription">
+          Une plateforme d'administration web conçue pour centraliser la gestion et faciliter le contrôle des opérations
+          quotidiennes.
+        </p>
+
+        <a class="project-link" href="https://x-production-bbaa.up.railway.app/" target="_blank" rel="noopener">
+          <span data-i18n="viewProject">Voir le projet</span>
+          <span class="link-arrow">↗</span>
+        </a>
+      </div>
+
+      <footer>
+        <span>© <span id="year"></span> <span data-i18n="footerName">Youssef Kotari</span></span>
+        <span class="dot">•</span>
+        <span data-i18n="footerCard">Carte de visite numérique</span>
+      </footer>
+    </section>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
